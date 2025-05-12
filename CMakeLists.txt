@@ -20,7 +20,7 @@ set(CMAKE_C_FLAGS "-O0")
 set_target_properties(${OUT} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
     OUTPUT_NAME "hello"
-    LINK_FLAGS "-sEXPORT_ES6=1 -sMODULARIZE=1 -sEXPORT_NAME=HelloModule -sEXPORTED_RUNTIME_METHODS=ccall,cwrap -sJSPI_EXPORTS=_mono -sEXPORTED_FUNCTIONS=_malloc,_main,_mono -sJSPI=1 -sJSPI_EXPORTS=mono -sJSPI_IMPORTS=fetchmono --js-library ${CMAKE_SOURCE_DIR}/src/library_jspi.js"
+    LINK_FLAGS "-sEXPORT_ES6=1 -sMODULARIZE=1 -sEXPORT_NAME=HelloModule -sEXPORTED_RUNTIME_METHODS=ccall,cwrap -sJSPI_EXPORTS=_mono -sEXPORTED_FUNCTIONS=_malloc,_main,_mono,_remono -sJSPI=1 -sJSPI_EXPORTS=mono -sJSPI_IMPORTS=fetchmono --js-library ${CMAKE_SOURCE_DIR}/src/library_jspi.js"
 )
 
 # Copy the index.html file to the build directory

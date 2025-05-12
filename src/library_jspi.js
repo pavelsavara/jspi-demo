@@ -2,6 +2,10 @@ mergeInto(LibraryManager.library, {
     // this is called as JSPI_IMPORTS
     fetchmono: async function () {
         const res = await fetch("index.html");
+
+        // re-enter C
+        _remono();
+
         const text = await res.text();
 
         // convert to char*
